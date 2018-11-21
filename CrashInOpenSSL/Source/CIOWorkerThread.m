@@ -13,13 +13,10 @@
 
 - (void)start {
     [super start];
-//    NSLog(@"FUNCTION:%s LINE:%@ Thread:%p", __FUNCTION__, @(__LINE__), [NSThread currentThread]);
 }
 
 - (void)main {
-    /**
-     thread body.
-     */
+    
     unsigned char key[] = "vitonzhangtt";
     unsigned char buffer[] = "hello,world";
     NSUInteger length = sizeof(buffer)/sizeof(char);
@@ -28,7 +25,9 @@
     NSData *rawData = [NSData dataWithBytes:buffer length:length];
     
     while (true) {
-        [CIOAESEncryption encryptData:rawData key:key];
+        NSData *encrytedData = [CIOAESEncryption encryptData:rawData key:key];
+        NSLog(@"Thread:%p |encrytedData length: %lu", [NSThread currentThread],
+              [encrytedData length]);
         [NSThread sleepForTimeInterval:0.01];
     }
     

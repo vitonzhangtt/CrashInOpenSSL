@@ -10,8 +10,6 @@
 #import <CommonCrypto/CommonCrypto.h>
 #import <openssl/sha.h>
 #import <openssl/evp.h>
-#import <openssl/conf.h>
-#import <openssl/err.h>
 
 @implementation CIOAESEncryption
 
@@ -35,18 +33,18 @@
     /**
      ERR_load_crypto_strings() registers the error strings for all libcrypto functions.
      */
-    ERR_load_crypto_strings();
+//    ERR_load_crypto_strings();
     
     /**
      */
-    OpenSSL_add_all_algorithms();
+//    OpenSSL_add_all_algorithms();
     
     /**
      OPENSSL_config() configures OpenSSL using the standard `openssl.cnf` and reads from the
      application section appname. If appname is NULL then the default section, openssl_conf,
      will be used. Errors are silently ignored. Multiple calls have no effect.
      */
-    OPENSSL_config(NULL);
+//    OPENSSL_config(NULL);
     
     EVP_CIPHER_CTX *ctx;
     int cryptoLength = 0;
@@ -149,7 +147,7 @@ CLEAN_OpenSSL_Library:
      
      A typical application will call OpenSSL_add_all_algorithms() initially and EVP_cleanup() before exiting.
      */
-    EVP_cleanup();
+//    EVP_cleanup();
     
     /**
      void ERR_free_strings(void);
@@ -159,7 +157,7 @@ CLEAN_OpenSSL_Library:
      The ERR_load_crypto_strings(), SSL_load_error_strings(), and ERR_free_strings() functions
      were deprecated in OpenSSL 1.1.0 by OPENSSL_init_crypto() and OPENSSL_init_ssl().
      */
-    ERR_free_strings();
+//    ERR_free_strings();
     
     /**
      void CONF_modules_free(void);
@@ -173,9 +171,18 @@ CLEAN_OpenSSL_Library:
      
      CONF_modules_free() was deprecated in OpenSSL 1.1.0.
      */
-    CONF_modules_free();
+//    CONF_modules_free();
     
     return result;
 }
+
++ (NSData *)decryptData:(NSData *)data
+                    key:(const unsigned char *)key {
+    
+    NSData *result = nil;
+    
+    return result;
+}
+
 
 @end

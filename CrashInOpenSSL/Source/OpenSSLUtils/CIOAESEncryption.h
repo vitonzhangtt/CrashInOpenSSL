@@ -13,4 +13,7 @@
 + (NSData *)encryptData:(NSData *)data
                     key:(const unsigned char *)key;
 
++ (NSData *)decryptData:(NSData *)data
+                    key:(const unsigned char *)key;
+
 @end

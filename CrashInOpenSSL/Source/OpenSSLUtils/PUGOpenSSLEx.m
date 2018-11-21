@@ -10,6 +10,7 @@
 #import <openssl/crypto.h>
 #import <openssl/ssl.h>
 #import <openssl/err.h>
+#import <openssl/conf.h>
 #import <pthread/pthread.h>
 
 static pthread_mutex_t *ssl_mutex = NULL;
@@ -54,6 +55,7 @@ int ssl_init(void)
     ERR_load_crypto_strings();
     SSL_load_error_strings();
     OpenSSL_add_all_algorithms();
+    OPENSSL_config(NULL);
     
     return 0;
 }
