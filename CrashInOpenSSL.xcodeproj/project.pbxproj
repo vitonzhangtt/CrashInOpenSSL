@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6722900C21A52B7800263796 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6722900B21A52B7800263796 /* AppDelegate.m */; };
+		6722900F21A52B7800263796 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6722900E21A52B7800263796 /* ViewController.m */; };
+		6722901221A52B7800263796 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6722901021A52B7800263796 /* Main.storyboard */; };
+		6722901421A52B7800263796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6722901321A52B7800263796 /* Assets.xcassets */; };
+		6722901721A52B7800263796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6722901521A52B7800263796 /* LaunchScreen.storyboard */; };
+		6722901A21A52B7800263796 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6722901921A52B7800263796 /* main.m */; };
+		6722902421A5340000263796 /* CIOAESEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6722902321A5340000263796 /* CIOAESEncryption.m */; };
+		6722902921A558FB00263796 /* CIOWorkerThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 6722902821A558FB00263796 /* CIOWorkerThread.m */; };
+		6722903421A5647600263796 /* PUGOpenSSLEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 6722903321A5647600263796 /* PUGOpenSSLEx.m */; };
+		C59CBF0DCC9E96533FEC2EB3 /* libPods-CrashInOpenSSL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E134647900B54D9AC964C4 /* libPods-CrashInOpenSSL.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6722900721A52B7800263796 /* CrashInOpenSSL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrashInOpenSSL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6722900A21A52B7800263796 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6722900B21A52B7800263796 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6722900D21A52B7800263796 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6722900E21A52B7800263796 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6722901121A52B7800263796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6722901321A52B7800263796 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6722901621A52B7800263796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6722901821A52B7800263796 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6722901921A52B7800263796 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6722902221A5340000263796 /* CIOAESEncryption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIOAESEncryption.h; sourceTree = "<group>"; };
+		6722902321A5340000263796 /* CIOAESEncryption.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIOAESEncryption.m; sourceTree = "<group>"; };
+		6722902721A558FB00263796 /* CIOWorkerThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIOWorkerThread.h; sourceTree = "<group>"; };
+		6722902821A558FB00263796 /* CIOWorkerThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIOWorkerThread.m; sourceTree = "<group>"; };
+		6722903221A5647600263796 /* PUGOpenSSLEx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUGOpenSSLEx.h; sourceTree = "<group>"; };
+		6722903321A5647600263796 /* PUGOpenSSLEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUGOpenSSLEx.m; sourceTree = "<group>"; };
+		7DD699B90589ED16B79D52E2 /* Pods-CrashInOpenSSL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashInOpenSSL.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrashInOpenSSL/Pods-CrashInOpenSSL.debug.xcconfig"; sourceTree = "<group>"; };
+		ACFA78CAE6DB8BCBBDF9F661 /* Pods-CrashInOpenSSL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrashInOpenSSL.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrashInOpenSSL/Pods-CrashInOpenSSL.release.xcconfig"; sourceTree = "<group>"; };
+		E5E134647900B54D9AC964C4 /* libPods-CrashInOpenSSL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CrashInOpenSSL.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6722900421A52B7800263796 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59CBF0DCC9E96533FEC2EB3 /* libPods-CrashInOpenSSL.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61E92DA38C224297CF496644 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DD699B90589ED16B79D52E2 /* Pods-CrashInOpenSSL.debug.xcconfig */,
+				ACFA78CAE6DB8BCBBDF9F661 /* Pods-CrashInOpenSSL.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		67228FFE21A52B7800263796 = {
+			isa = PBXGroup;
+			children = (
+				6722900921A52B7800263796 /* CrashInOpenSSL */,
+				6722900821A52B7800263796 /* Products */,
+				61E92DA38C224297CF496644 /* Pods */,
+				E932736604793D52F830EDEC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6722900821A52B7800263796 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6722900721A52B7800263796 /* CrashInOpenSSL.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6722900921A52B7800263796 /* CrashInOpenSSL */ = {
+			isa = PBXGroup;
+			children = (
+				6722902021A5322300263796 /* Source */,
+				6722901021A52B7800263796 /* Main.storyboard */,
+				6722901321A52B7800263796 /* Assets.xcassets */,
+				6722901521A52B7800263796 /* LaunchScreen.storyboard */,
+				6722901821A52B7800263796 /* Info.plist */,
+				6722901921A52B7800263796 /* main.m */,
+			);
+			path = CrashInOpenSSL;
+			sourceTree = "<group>";
+		};
+		6722902021A5322300263796 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				6722902121A5323900263796 /* OpenSSLUtils */,
+				6722900A21A52B7800263796 /* AppDelegate.h */,
+				6722900B21A52B7800263796 /* AppDelegate.m */,
+				6722900D21A52B7800263796 /* ViewController.h */,
+				6722900E21A52B7800263796 /* ViewController.m */,
+				6722902721A558FB00263796 /* CIOWorkerThread.h */,
+				6722902821A558FB00263796 /* CIOWorkerThread.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		6722902121A5323900263796 /* OpenSSLUtils */ = {
+			isa = PBXGroup;
+			children = (
+				6722903221A5647600263796 /* PUGOpenSSLEx.h */,
+				6722903321A5647600263796 /* PUGOpenSSLEx.m */,
+				6722902221A5340000263796 /* CIOAESEncryption.h */,
+				6722902321A5340000263796 /* CIOAESEncryption.m */,
+			);
+			path = OpenSSLUtils;
+			sourceTree = "<group>";
+		};
+		E932736604793D52F830EDEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5E134647900B54D9AC964C4 /* libPods-CrashInOpenSSL.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6722900621A52B7800263796 /* CrashInOpenSSL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6722901D21A52B7800263796 /* Build configuration list for PBXNativeTarget "CrashInOpenSSL" */;
+			buildPhases = (
+				6722902521A540BA00263796 /* ShellScript */,
+				0E0A0CB2C4F4E34BF2E3AAD9 /* [CP] Check Pods Manifest.lock */,
+				6722900321A52B7800263796 /* Sources */,
+				6722900421A52B7800263796 /* Frameworks */,
+				6722900521A52B7800263796 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrashInOpenSSL;
+			productName = CrashInOpenSSL;
+			productReference = 6722900721A52B7800263796 /* CrashInOpenSSL.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67228FFF21A52B7800263796 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = zhangchong;
+				TargetAttributes = {
+					6722900621A52B7800263796 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6722900221A52B7800263796 /* Build configuration list for PBXProject "CrashInOpenSSL" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 67228FFE21A52B7800263796;
+			productRefGroup = 6722900821A52B7800263796 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6722900621A52B7800263796 /* CrashInOpenSSL */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6722900521A52B7800263796 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6722901721A52B7800263796 /* LaunchScreen.storyboard in Resources */,
+				6722901421A52B7800263796 /* Assets.xcassets in Resources */,
+				6722901221A52B7800263796 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E0A0CB2C4F4E34BF2E3AAD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrashInOpenSSL-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6722902521A540BA00263796 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"PODS_ROOT:\"\necho ${PODS_ROOT}\necho ${PODS_ROOT}/Headers/Public";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6722900321A52B7800263796 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6722903421A5647600263796 /* PUGOpenSSLEx.m in Sources */,
+				6722900F21A52B7800263796 /* ViewController.m in Sources */,
+				6722902921A558FB00263796 /* CIOWorkerThread.m in Sources */,
+				6722901A21A52B7800263796 /* main.m in Sources */,
+				6722902421A5340000263796 /* CIOAESEncryption.m in Sources */,
+				6722900C21A52B7800263796 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6722901021A52B7800263796 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6722901121A52B7800263796 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6722901521A52B7800263796 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6722901621A52B7800263796 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6722901B21A52B7800263796 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6722901C21A52B7800263796 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6722901E21A52B7800263796 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD699B90589ED16B79D52E2 /* Pods-CrashInOpenSSL.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AD9385276N;
+				INFOPLIST_FILE = CrashInOpenSSL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.diamondstudio.next.CrashInOpenSSL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6722901F21A52B7800263796 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACFA78CAE6DB8BCBBDF9F661 /* Pods-CrashInOpenSSL.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AD9385276N;
+				INFOPLIST_FILE = CrashInOpenSSL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.diamondstudio.next.CrashInOpenSSL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6722900221A52B7800263796 /* Build configuration list for PBXProject "CrashInOpenSSL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6722901B21A52B7800263796 /* Debug */,
+				6722901C21A52B7800263796 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6722901D21A52B7800263796 /* Build configuration list for PBXNativeTarget "CrashInOpenSSL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6722901E21A52B7800263796 /* Debug */,
+				6722901F21A52B7800263796 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67228FFF21A52B7800263796 /* Project object */;
+}
