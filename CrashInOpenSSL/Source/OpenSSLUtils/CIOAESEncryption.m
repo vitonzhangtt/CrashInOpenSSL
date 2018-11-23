@@ -7,24 +7,19 @@
 //
 
 #import "CIOAESEncryption.h"
-#import <CommonCrypto/CommonCrypto.h>
 #import <openssl/sha.h>
 #import <openssl/evp.h>
+#import <CommonCrypto/CommonCrypto.h>
 
 @implementation CIOAESEncryption
 
 + (NSData *)encryptData:(NSData *)data
-                    key:(const unsigned char *)key {
+                    key:(const unsigned char *)key
+          initialVector:(const unsigned char *)initialVector {
     
     NSData *result = nil;
     
-    // generate initailization vector.
-    char initialVector[kCCBlockSizeAES128];
-    for (NSUInteger i = 0; i < kCCBlockSizeAES128; i++) {
-        initialVector[i] = arc4random();
-    }
-    
-    int dataSize = (int32_t)[data length]/sizeof(unsigned char);
+    int dataSize = (int)[data length]/sizeof(unsigned char);
 //    size_t bufferSize = dataSize + kCCBlockSizeAES128 * 2;
     size_t bufferSize = dataSize + kCCBlockSizeAES128;
     void *buffer = malloc(bufferSize);
@@ -177,12 +172,97 @@ CLEAN_OpenSSL_Library:
 }
 
 + (NSData *)decryptData:(NSData *)data
-                    key:(const unsigned char *)key {
+                    key:(const unsigned char *)key
+          initialVector:(const unsigned char *)initialVector {
     
     NSData *result = nil;
+    
+    int dataSize = (int)[data length]/sizeof(unsigned char);
+    size_t bufferSize = dataSize + kCCBlockSizeAES128;
+    void *buffer = malloc(bufferSize);
+    int decryptLength = 0;
+    
+    EVP_CIPHER_CTX *ctx;
+    int cryptoLength = 0;
+    
+    /**
+     EVP_CIPHER_CTX_new() creates a cipher context.
+     */
+    if (!(ctx = EVP_CIPHER_CTX_new())) {
+        goto CLEAN_OpenSSL_Library;
+    }
+
+    if (1 != EVP_DecryptInit_ex(ctx, EVP_aes_256_cbc(), NULL, key, initialVector)) {
+        goto CLEAN_OpenSSL_Library;
+    }
+    else {
+        EVP_CIPHER_CTX_set_padding(ctx, 1);
+    }
+    
+    /**
+     1. https://www.openssl.org/docs/man1.0.2/crypto/EVP_DecryptUpdate.html
+     int EVP_DecryptUpdate(EVP_CIPHER_CTX *ctx, unsigned char *out,
+                            int *outl, const unsigned char *in, int inl);
+     
+     EVP_DecryptInit_ex(), EVP_DecryptUpdate() and EVP_DecryptFinal_ex() are
+     the corresponding decryption operations. EVP_DecryptFinal() will return
+     an error code if padding is enabled and the final block is not correctly formatted.
+     
+     The parameters and restrictions are identical to the encryption operations
+     except that if padding is enabled the decrypted data buffer out passed to
+     EVP_DecryptUpdate() should have sufficient room for (inl + cipher_block_size)
+     bytes unless the cipher block size is 1 in which case inl bytes is sufficient.
+     */
+    if (1 != EVP_DecryptUpdate(ctx, buffer, &cryptoLength, [data bytes], dataSize)) {
+        goto CLEAN_OpenSSL_Library;
+    }
+    decryptLength = cryptoLength;
+    
+    if(1 != EVP_DecryptFinal_ex(ctx, buffer + cryptoLength, &cryptoLength)) {
+        goto CLEAN_OpenSSL_Library;
+    }
+    decryptLength += cryptoLength;
+    result = [NSData dataWithBytesNoCopy:buffer length:decryptLength];
+    
+
+CLEAN_OpenSSL_Library:
+    if (ctx) {
+        EVP_CIPHER_CTX_free(ctx);
+    }
     
     return result;
 }
 
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

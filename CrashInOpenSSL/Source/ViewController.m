@@ -33,6 +33,7 @@
     
     for (NSUInteger i = 0; i < self.poolSize; i++) {
         CIOWorkerThread *workerThread = [[CIOWorkerThread alloc] init];
+        workerThread.name = [NSString stringWithFormat:@"Thread-%lu ", (unsigned long)i];
         [self.threadPool addObject:workerThread];
     }
     

@@ -11,9 +11,11 @@
 @interface CIOAESEncryption : NSObject
 
 + (NSData *)encryptData:(NSData *)data
-                    key:(const unsigned char *)key;
+                    key:(const unsigned char *)key
+          initialVector:(const unsigned char *)initialVector;
 
 + (NSData *)decryptData:(NSData *)data
-                    key:(const unsigned char *)key;
+                    key:(const unsigned char *)key
+          initialVector:(const unsigned char *)initialVector;
 
 @end
